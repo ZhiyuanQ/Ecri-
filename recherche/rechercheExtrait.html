@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	<script src="../js/docheck.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		.element{
+			width: 1000px; height: 400px;
+			position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+			margin: auto;
+		}
+	</style>
+	 
+
+	<title>Écri +</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<!-- Owl Carousel -->
+	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+	<!-- Magnific Popup -->
+	<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+		<!-- Header -->
+		<header id="home">
+			<!-- Background Image -->
+			<div class="bg-img" style="background-image: url('./img/background1.jpg');">
+				<div class="overlay"></div>
+			</div>
+			<!-- /Background Image -->
+
+			<!-- Nav -->
+		<nav id="nav" class="navbar nav-transparent">
+			<div class="container">
+
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<img class="logo" src="img/2.png">
+						<img class="logo-alt" src="img/1.png">
+					</div>
+					<!-- /Logo -->
+
+					<!-- Collapse nav button -->
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+					<!-- /Collapse nav button -->
+				</div>
+
+				<!--  Main navigation  -->
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="../WEB.html">Bienvenue</a></li>
+					<li><a href="./rechercheExtrait.html">Recherche</a></li>				
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<!-- /Main navigation -->
+
+			</div>
+		</nav>
+		<!-- /Nav -->
+
+			
+
+		</header>
+		<!-- /Header -->
+
+	<!-- soumettre form -->
+	<div class=" element ">
+		<form id="form" class="contact-form" action="ConnexionRE.php" method="post">
+			<h1 class="white-text">
+				<font size = "7">
+					Sélectionnez le type de dysfonctionnement pour commencer votre recherche !
+				</font>
+			</h1>
+			<input list="type" type="text" class="input" name="type" placeholder="Type de dysfonctionnement" autocomplete="off" />
+			<datalist id="type">
+				<option value="Lexique" />
+				<option value="Orthographe" />
+				<option value="Ponctuation" />
+				<option value="Syntaxe / Construction des phrases" />
+				<option value="Cohérence / cohésion / argumentation" />
+				<option value="Discours rapporté / Citation/ Sources" />
+				<option value="Autres" />
+			</datalist>
+			<p></p>
+			<button type = "submit" class="main-btn" name="submit" onclick="docheck(php);">Recherche</button>
+		</form>
+	</div>
+
+	<script>
+		let php='ConnexionRE.php';
+	</script>
+	<!-- /soumettre form -->
+
+	<!-- Contact -->
+	<div id="contact" class="section md-padding">
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- Row -->
+			<div class="row">
+
+				<!-- Section-header -->
+				<div class="section-header text-center">
+					<h2 class="title">Contactez nous</h2>
+				</div>
+				<!-- /Section-header -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-phone"></i>
+						<h3>Téléphone</h3>
+						<p>(+33)07 76 76 87 76</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-envelope"></i>
+						<h3>Email</h3>
+						<p>ecriplus@support.com</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
+				<div class="col-sm-4">
+					<div class="contact">
+						<i class="fa fa-facebook"></i>
+						<h3>Facebook</h3>
+						<p>@ecriplus</p>
+					</div>
+				</div>
+				<!-- /contact -->
+
+			</div>
+			<!-- /Row -->
+
+		</div>
+		<!-- /Container -->
+
+	</div>
+	<!-- /Contact -->
+
+	<!-- Footer -->
+	<footer id="footer" class="sm-padding bg-dark">
+
+	</footer>
+	<!-- /Footer -->
+
+	<!-- Back to top -->
+	<div id="back-to-top"></div>
+	<!-- /Back to top -->
+
+
+	<!-- jQuery Plugins -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
