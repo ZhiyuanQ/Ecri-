@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.6.6deb5ubuntu0.5
+- https://www.phpmyadmin.net
+-
+- Client :  localhost:3306
+- Généré le :  Lun 17 Mai 2021 à 12:57
+- Version du serveur :  10.1.48-MariaDB-0ubuntu0.18.04.1
+- Version de PHP :  7.2.24-0ubuntu0.18.04.7
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="qiuz" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="COMMENTAIRE">
+                CREATE TABLE `COMMENTAIRE` (
+                  `idComm` int(11) NOT NULL AUTO_INCREMENT,
+                  `posDebut` int(11) NOT NULL,
+                  `posFin` int(11) NOT NULL,
+                  `redacteur` int(11) NOT NULL,
+                  `typeDys` varchar(45) NOT NULL,
+                  `dateSaisie` date NOT NULL,
+                  `dateModif` date NOT NULL,
+                  `analyse` text NOT NULL,
+                  `idExtrait` int(11) NOT NULL,
+                  PRIMARY KEY (`idComm`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+            <pma:table name="EXTRAIT">
+                CREATE TABLE `EXTRAIT` (
+                  `idExtrait` int(11) NOT NULL AUTO_INCREMENT,
+                  `contenu` text,
+                  `niveau` varchar(10) NOT NULL,
+                  `filiere` varchar(35) NOT NULL,
+                  `genre` varchar(35) NOT NULL,
+                  `langueMat` varchar(20) NOT NULL,
+                  `complement` text NOT NULL,
+                  `dateDepot` date NOT NULL,
+                  `anneeCreation` varchar(4) NOT NULL,
+                  `depositaire` int(11) NOT NULL,
+                  PRIMARY KEY (`idExtrait`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COMMENT='Contient les extraits';
+            </pma:table>
+            <pma:table name="USER">
+                CREATE TABLE `USER` (
+                  `idUser` int(11) NOT NULL AUTO_INCREMENT,
+                  `login` varchar(20) NOT NULL,
+                  `mdp` varchar(20) NOT NULL,
+                  `statut` varchar(20) NOT NULL,
+                  `nom` varchar(20) NOT NULL,
+                  `prenom` varchar(20) NOT NULL,
+                  PRIMARY KEY (`idUser`),
+                  UNIQUE KEY `login` (`login`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de données :  'qiuz'
+    -->
+    <database name="qiuz">
+        <!-- Table COMMENTAIRE -->
+        <table name="COMMENTAIRE">
+            <column name="idComm">1</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Lexique</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">œuvrent vers / œuvrent pour / s'orientent vers</column>
+            <column name="idExtrait">1</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">2</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Orthographe</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">qu'elle chose : quelque chose (confusion avec le pronom indéfini  mais, n'y a-t-il pas une autre confusion sous jacente? telle chose qui ... Est-ce simplement un problème de grammaire? Un problème de syntaxe ? Cette erreur m' interroge.)
+ samble : semble (homophonie, pourtant verbe courant et pas de fautes dans sentiment...à cause du &quot;m&quot;?)
+ en dévulant : (un mot pour un autre? développant serait logique)</column>
+            <column name="idExtrait">2</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">3</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Lexique</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">qu'elle chose : quelque chose (confusion avec le pronom indéfini  mais, n'y a-t-il pas une autre confusion sous jacente? telle chose qui ... Est-ce simplement un problème de grammaire? Un problème de syntaxe ? Cette erreur m' interroge.)
+ samble : semble (homophonie, pourtant verbe courant et pas de fautes dans sentiment...à cause du &quot;m&quot;?)
+ en dévulant : (un mot pour un autre? développant serait logique)</column>
+            <column name="idExtrait">2</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">4</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Syntaxe / Construction des phrases</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">qu'elle chose : quelque chose (confusion avec le pronom indéfini  mais, n'y a-t-il pas une autre confusion sous jacente? telle chose qui ... Est-ce simplement un problème de grammaire? Un problème de syntaxe ? Cette erreur m' interroge.)
+ samble : semble (homophonie, pourtant verbe courant et pas de fautes dans sentiment...à cause du &quot;m&quot;?)
+ en dévulant : (un mot pour un autre? développant serait logique)</column>
+            <column name="idExtrait">2</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">5</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Orthographe</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">Quelque soit =&gt; Quel que soit</column>
+            <column name="idExtrait">3</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">6</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Ponctuation</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">Goethe, lui considère =&gt; Goethe considère/ Goethe, quant à lui, considère
+(double problème de virgule et usage de lui emphatique)</column>
+            <column name="idExtrait">4</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">7</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Syntaxe / Construction des phrases</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">Goethe, lui considère =&gt; Goethe considère/ Goethe, quant à lui, considère
+(double problème de virgule et usage de lui emphatique)</column>
+            <column name="idExtrait">4</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">8</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Cohérence / cohésion / argumentation</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">Rien d'incorrect au niveau linguistique, mais assez maladroit au niveau argumentatif (trivial). Peut-être qu'une meilleure maîtrise stylistique rendrait le propos acceptable : on ne note pas d'opposition nette entre les textes; ils adoptent des approches complémentaires sur la question.</column>
+            <column name="idExtrait">5</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">9</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Autres</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">Un peu lourd. Reformulation proposée : 
+L’hypothèse est validée par les résultats chiffrés présentés.</column>
+            <column name="idExtrait">6</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">10</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Autres</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">Présence abusive de négation
+Citation erronée</column>
+            <column name="idExtrait">7</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">11</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Syntaxe / Construction des phrases</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">Présence abusive de négation
+Citation erronée</column>
+            <column name="idExtrait">7</column>
+        </table>
+        <table name="COMMENTAIRE">
+            <column name="idComm">12</column>
+            <column name="posDebut">0</column>
+            <column name="posFin">0</column>
+            <column name="redacteur">0</column>
+            <column name="typeDys">Discours rapporté / Citation/ Sources</column>
+            <column name="dateSaisie">0000-00-00</column>
+            <column name="dateModif">0000-00-00</column>
+            <column name="analyse">Présence abusive de négation
+Citation erronée</column>
+            <column name="idExtrait">7</column>
+        </table>
+        <!-- Table EXTRAIT -->
+        <table name="EXTRAIT">
+            <column name="idExtrait">1</column>
+            <column name="contenu">Toutefois, Eddy Roulet puis Corinne Rossari œuvrent vers une représentation plus élargie de la reformulation.</column>
+            <column name="niveau">Master</column>
+            <column name="filiere">SDL</column>
+            <column name="genre">Mémoire</column>
+            <column name="langueMat">Francais</column>
+            <column name="complement"></column>
+            <column name="dateDepot">2021-04-08</column>
+            <column name="anneeCreation"></column>
+            <column name="depositaire">1</column>
+        </table>
+        <table name="EXTRAIT">
+            <column name="idExtrait">2</column>
+            <column name="contenu">Tout humain repousse qu'elle chose qui lui samble inconnue et cherche à s'en protéger en dévulant un sentiment de peur.</column>
+            <column name="niveau">BTS</column>
+            <column name="filiere">PME/PMI</column>
+            <column name="genre">Ecriture personnelle</column>
+            <column name="langueMat">Francais</column>
+            <column name="complement"></column>
+            <column name="dateDepot">2021-04-01</column>
+            <column name="anneeCreation"></column>
+            <column name="depositaire">1</column>
+        </table>
+        <table name="EXTRAIT">
+            <column name="idExtrait">3</column>
+            <column name="contenu">Quelque soit le contexte dans lequel il écrivait, il était toujours productif.</column>
+            <column name="niveau">M1</column>
+            <column name="filiere">MEEF-PE, ESPE</column>
+            <column name="genre"> Devoir d'analyse type CRPE</column>
+            <column name="langueMat">Francais</column>
+            <column name="complement"></column>
+            <column name="dateDepot">2021-04-03</column>
+            <column name="anneeCreation"></column>
+            <column name="depositaire">2</column>
+        </table>
+        <table name="EXTRAIT">
+            <column name="idExtrait">4</column>
+            <column name="contenu">Goethe, lui considère qu'une production artistique dépendrait seulement de l'inspiration divine.</column>
+            <column name="niveau">M1</column>
+            <column name="filiere">MEEF-PE, ESPE</column>
+            <column name="genre">Devoir d'analyse type CRPE</column>
+            <column name="langueMat">Francais</column>
+            <column name="complement"></column>
+            <column name="dateDepot">2021-05-05</column>
+            <column name="anneeCreation"></column>
+            <column name="depositaire">2</column>
+        </table>
+        <table name="EXTRAIT">
+            <column name="idExtrait">5</column>
+            <column name="contenu">Les textes et les auteurs s'opposent très peu, ils se complètent sur le sujet.</column>
+            <column name="niveau">M1</column>
+            <column name="filiere">MEEF-PE, ESPE</column>
+            <column name="genre">Devoir d'analyse type CRPE</column>
+            <column name="langueMat">Français</column>
+            <column name="complement"></column>
+            <column name="dateDepot">2021-05-11</column>
+            <column name="anneeCreation"></column>
+            <column name="depositaire">1</column>
+        </table>
+        <table name="EXTRAIT">
+            <column name="idExtrait">6</column>
+            <column name="contenu">Après avoir explicité tous les chiffres et les calculs, elle montre clairement que tous ses résultats correspondent à l'hypothèse avancée. </column>
+            <column name="niveau">M1</column>
+            <column name="filiere">Didactique des langues</column>
+            <column name="genre">Résumé de mémoire</column>
+            <column name="langueMat">Français</column>
+            <column name="complement"></column>
+            <column name="dateDepot">2021-05-11</column>
+            <column name="anneeCreation"></column>
+            <column name="depositaire">1</column>
+        </table>
+        <table name="EXTRAIT">
+            <column name="idExtrait">7</column>
+            <column name="contenu">D’après l’auteur , aucune de ces perspectives n’est (pas) suffisante parce qu’elles ne prennent pas en considération la richesse et la complexité du langage</column>
+            <column name="niveau">M2</column>
+            <column name="filiere">SCL</column>
+            <column name="genre"></column>
+            <column name="langueMat">Français</column>
+            <column name="complement"></column>
+            <column name="dateDepot">2021-05-11</column>
+            <column name="anneeCreation"></column>
+            <column name="depositaire">1</column>
+        </table>
+        <!-- Table USER -->
+        <table name="USER">
+            <column name="idUser">1</column>
+            <column name="login">qiuz</column>
+            <column name="mdp">5NaMepZQzu</column>
+            <column name="statut">admin</column>
+            <column name="nom">qiu</column>
+            <column name="prenom">zhiyuan</column>
+        </table>
+        <table name="USER">
+            <column name="idUser">2</column>
+            <column name="login">yangh</column>
+            <column name="mdp">yangh</column>
+            <column name="statut">admin</column>
+            <column name="nom">yang</column>
+            <column name="prenom">heng</column>
+        </table>
+    </database>
+</pma_xml_export>
