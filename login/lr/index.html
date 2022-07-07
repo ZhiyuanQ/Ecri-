@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	<script src="../js/docheck.js" type="text/javascript" charset="utf-8"></script>
+    <title>Connexion</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container left-panel-active">
+        <!-- Crée un compte -->
+        <div class="container__form container--signup">
+            <form action="#" class="form">
+                <h2 class="form__title">Créez un compte</h2>
+                <input type="text" placeholder="User" class="input" />
+                <input type="email" placeholder="Email" class="input" />
+                <input type="password" placeholder="Password" class="input" />
+                <button class="btn">Vous inscrire</button>
+            </form>
+        </div>
+
+        <!-- Se connecter -->
+        <div class="container__form container--signin">
+            <form method="post" class="form" id="form">
+                <h2 class="form__title">Bienvenue</h2>
+                <input type="text" placeholder="Username" class="input" name="login"/>
+                <input type="password" placeholder="Password" class="input" name="pwd"/>
+ 
+                <input class="btn" type="submit" onclick="docheck(php);" value="Se connecter" />
+				<script>
+					let php = '../verifAuth.php';
+				</script>
+				
+            </form>
+        </div>
+
+        <!-- Partie superposée  -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <button class="btn" id="signIn">DÉJÀ INSCRIT?</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <button class="btn" id="signUp">CRÉEZ UN COMPTE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script>
+		let php = '../verifAuth.php';
+	</script>
+	
+</body>
+<script src="script.js"></script>
+</html>
